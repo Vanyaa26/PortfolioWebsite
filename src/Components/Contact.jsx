@@ -81,8 +81,8 @@ const ContactMe = () => {
                         </div>
                         <div>
                             <h3 className="text-lg font-semibold mb-2">Get in Touch</h3>
-                            <p className="text-gray-600 text-sm">{contactEmail}</p>
-                            <p className="text-gray-600 text-sm">{contactNumber}</p>
+                            <p className="text-gray-600 text-sm">tentiwalavanya26@gmail.com</p>
+                            <p className="text-gray-600 text-sm">+91 7300757445</p>
                         </div>
                     </motion.div>
                 </div>

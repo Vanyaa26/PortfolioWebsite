@@ -38,7 +38,7 @@ const Header = () => {
           <a href="https://www.linkedin.com/in/vanya-tentiwala/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-500">
             <Linkedin size={30} />
           </a>
-          <a href={instaID} target="_blank" className="hover:text-gray-500">
+          <a href="https://www.instagram.com/ink._itblack?igsh=YTk5ZTZweDZxcTF6" target="_blank" className="hover:text-gray-500">
             <Instagram size={30} />
           </a>
         </div>

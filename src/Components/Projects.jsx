@@ -20,7 +20,7 @@ const Projects = () => {
             title: "Portfolio Website",
             description: "Personal portfolio website showcasing my skills and projects. Built with modern web technologies and animations.",
             technologies: ["React", "Tailwind CSS", "Framer Motion"],
-            github: "https://github.com/yourusername/portfolio",
+            github: "https://github.com/Vanyaa26/PortfolioWebsite.git",
             
             image: require('../assets/Portfolio.png')
         },
