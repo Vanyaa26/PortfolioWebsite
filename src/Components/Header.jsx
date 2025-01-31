@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail, Download, Instagram } from "lucide-react";
 import VanyaCV from "../assets/VanyaCV.pdf";
 
 const Header = () => {
-    const instaID = process.env.REACT_APP_INSTA_ID;
+   
   return (
     <div className="flex gap-[6rem] bg-slate-100 h-screen items-center justify-center px-8 relative">
       {/* Left Section */}
