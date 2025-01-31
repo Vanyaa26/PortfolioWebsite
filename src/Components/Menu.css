@@ -1,0 +1,19 @@
+@keyframes rotateText {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+  
+.rotating-text {
+    font-size: 5px;
+    fill: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing:44px;
+    animation: rotateText 30s linear infinite;
+    transform-origin: center;
+}
+  
