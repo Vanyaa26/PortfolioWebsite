@@ -8,7 +8,7 @@ const Menu = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row">
       {/* Left Black Section */}
-      <div className="w-full lg:w-1/3 bg-black relative p-6 lg:p-0   ">
+      <div className="w-full lg:w-1/3 bg-black relative p-6 lg:p-0 flex-shrink-0 ">
         <motion.h2 
           className="text-white text-4xl sm:text-5xl lg:text-6xl lg:absolute lg:top-1/4 lg:left-9"
           initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ const Menu = () => {
                 d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
                 fill="none"
               />
-              <text className="text-[8px] sm:text-[9px] lg:text-[10.9px] fill-white rotating-text tracking-wider">
+              <text className="text-[16px] sm:text-[2px] lg:text-[11px] fill-white rotating-text tracking-wider">
                 <textPath href="#textCircle" className="tracking-widest">
                 •  Data Scientist • Web Developer • A Learner • Problem Solver
                 </textPath>
@@ -49,7 +49,7 @@ const Menu = () => {
       </div>
 
       {/* Right Gradient Section */}
-      <div className="w-full lg:w-2/3 bg-gradient-to-r from-blue-200 via-blue-300 to-slate-500 flex items-center justify-center p-8 lg:p-0">
+      <div className="w-full lg:w-2/3 bg-gradient-to-r from-blue-200 via-blue-300 to-slate-500 flex items-center justify-center p-8 lg:p-0 flex-grow">
         <motion.nav 
           className="space-y-4 sm:space-y-6 lg:space-y-8"
           initial={{ opacity: 0, x: 50 }}

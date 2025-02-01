@@ -17,7 +17,7 @@ const ContactMe = () => {
           
             <button 
                 onClick={handleMenu} 
-                className="absolute top-4 left-4 p-2 bg-white rounded-md shadow-lg hover:bg-gray-200 transition duration-300 z-50"
+                className="absolute top-4 right-4 p-2 bg-white rounded-md shadow-lg hover:bg-gray-200 transition duration-300 z-50"
             >
                 <FaBars className="text-xl sm:text-2xl text-gray-700" />
             </button>
