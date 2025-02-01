@@ -46,14 +46,15 @@ const SkillsAndAchievements = () => {
             ]
         }
     ];
+
     return (
-        <div className="min-h-screen bg-gradient-to-r from-blue-200 via-blue-300 to-slate-500 p-8">
+        <div className="min-h-screen bg-gradient-to-r from-blue-200 via-blue-300 to-slate-500 p-4 sm:p-6 lg:p-8">
             {/* Menu Button */}
             <button 
                 onClick={() => navigate('/menu')} 
-                className="fixed top-4 right-4 p-2 bg-slate-400 text-white rounded-md hover:bg-slate-500 transition-all duration-300"
+                className="fixed top-4 right-4 p-2 bg-slate-400 text-white rounded-md hover:bg-slate-500 transition-all duration-300 z-50"
             >
-                <FaBars className="text-2xl" />
+                <FaBars className="text-xl sm:text-2xl" />
             </button>
 
             {/* Main Content */}
@@ -63,10 +64,12 @@ const SkillsAndAchievements = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="mb-12"
+                    className="mb-8 sm:mb-12"
                 >
-                    <h1 className="text-5xl font-bold mb-4 text-gray-700">Skills & Achievements</h1>
-                    <div className="h-1 w-32 bg-slate-400"></div>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 text-gray-700">
+                        Skills & Achievements
+                    </h1>
+                    <div className="h-1 w-24 sm:w-32 bg-slate-400"></div>
                 </motion.div>
 
                 {/* Skills Section */}
@@ -74,23 +77,27 @@ const SkillsAndAchievements = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="mb-16"
+                    className="mb-8 sm:mb-16"
                 >
-                    <div className="bg-white rounded-lg shadow-lg p-8">
-                        <h2 className="text-3xl font-semibold mb-8 text-gray-700">Technical Skills</h2>
-                        <div className="grid md:grid-cols-2 gap-12">
+                    <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8">
+                        <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-8 text-gray-700">
+                            Technical Skills
+                        </h2>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
                             {skills.map((skillGroup, index) => (
-                                <div key={index} className="space-y-6">
-                                    <h3 className="text-xl font-medium mb-4 text-gray-700">{skillGroup.category}</h3>
+                                <div key={index} className="space-y-4 sm:space-y-6">
+                                    <h3 className="text-lg sm:text-xl font-medium mb-2 sm:mb-4 text-gray-700">
+                                        {skillGroup.category}
+                                    </h3>
                                     {skillGroup.items.map((skill, idx) => (
                                         <motion.div 
                                             key={idx}
                                             initial={{ width: 0 }}
                                             animate={{ width: "100%" }}
                                             transition={{ duration: 1, delay: 0.1 * idx }}
-                                            className="space-y-2"
+                                            className="space-y-1 sm:space-y-2"
                                         >
-                                            <div className="flex justify-between text-gray-700">
+                                            <div className="flex justify-between text-sm sm:text-base text-gray-700">
                                                 <span>{skill.name}</span>
                                                 <span>{skill.level}%</span>
                                             </div>
@@ -112,40 +119,48 @@ const SkillsAndAchievements = () => {
 
                 {/* Achievements Section */}
                 <motion.div 
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5, delay: 0.4 }}
-    className="bg-white rounded-lg shadow-lg p-8"
->
-    <h2 className="text-3xl font-semibold mb-8 text-gray-700">Notable Achievements</h2>
-    <div className="space-y-8">
-        {achievements.map((achievement, index) => (
-            <motion.div 
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="relative pl-8"
-            >
-                <h3 className="text-xl font-medium mb-6 text-gray-700">{achievement.year}</h3>
-                <div className="space-y-6">
-                    {achievement.items.map((item, idx) => (
-                        <motion.div 
-                            key={idx}
-                            initial={{ opacity: 0, x: -20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.5, delay: 0.1 * idx }}
-                            className="bg-gray-50 rounded-lg p-6 border-l-4 border-slate-400 hover:shadow-lg transition-all duration-300"
-                        >
-                            <h4 className="text-lg font-medium text-gray-700 mb-2">{item.title}</h4>
-                            <p className="text-gray-600">{item.description}</p>
-                        </motion.div>
-                    ))}
-                </div>
-            </motion.div>
-        ))}
-    </div>
-</motion.div>
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
+                    className="bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-8"
+                >
+                    <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-8 text-gray-700">
+                        Notable Achievements
+                    </h2>
+                    <div className="space-y-6 sm:space-y-8">
+                        {achievements.map((achievement, index) => (
+                            <motion.div 
+                                key={index}
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.5, delay: 0.1 * index }}
+                                className="relative pl-4 sm:pl-8"
+                            >
+                                <h3 className="text-lg sm:text-xl font-medium mb-4 sm:mb-6 text-gray-700">
+                                    {achievement.year}
+                                </h3>
+                                <div className="space-y-4 sm:space-y-6">
+                                    {achievement.items.map((item, idx) => (
+                                        <motion.div 
+                                            key={idx}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.5, delay: 0.1 * idx }}
+                                            className="bg-gray-50 rounded-lg p-4 sm:p-6 border-l-4 border-slate-400 hover:shadow-lg transition-all duration-300"
+                                        >
+                                            <h4 className="text-base sm:text-lg font-medium text-gray-700 mb-1 sm:mb-2">
+                                                {item.title}
+                                            </h4>
+                                            <p className="text-sm sm:text-base text-gray-600">
+                                                {item.description}
+                                            </p>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
         </div>
     );
